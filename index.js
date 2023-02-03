@@ -126,7 +126,7 @@ const addEmployeePrompt = () => {
 
         else {
 
-            fs.writeFile("./output/team.html", render(employeeList), (err) => {console.log(err)});
+            fs.writeFile("./output/team.html", render(employeeList), (err) => {if(err) {console.log(err)}});
 
             console.log("Process Complete.");
 
@@ -139,6 +139,5 @@ const addEmployeePrompt = () => {
 askQuestions("manager");
 
 
-// fs.writeFile(outputPath, render(employeeList));
 
 
